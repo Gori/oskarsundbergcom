@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-muted: rgb(255 255 255 / 0.55);
+  --color-rule: rgb(255 255 255 / 0.18);
+  --color-card: #1c1c1c;
+  --font-sans: var(--font-brockmann), Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html,
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--color-foreground);
+    color: var(--color-background);
+  }
+  a {
+    text-decoration: underline;
+    text-decoration-color: rgb(255 255 255 / 0.32);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 160ms ease;
+  }
+  a:hover {
+    text-decoration-color: currentColor;
+  }
 }
