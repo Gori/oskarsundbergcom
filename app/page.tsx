@@ -45,13 +45,12 @@ const PROJECTS: Project[] = [
     tags: "active · solo · side-project · ai · music",
     body: (
       <>
-        A four-track audio looper for macOS. Plays the first thing you record
-        back at the right BPM and locks the rest to it. Count-in metronome,
-        latency-compensated capture, waveforms drawn on the GPU. JUCE 8,
-        C++20, Metal, lock-free SPSC between UI and audio threads. AI style
-        transfer is in, record a vocal loop, get a guitar, a flute, whatever,
-        with audio pre-processing before conversion so the model has something
-        clean to work with.
+        A four-track audio looper for macOS with AI style transfer. Record a
+        vocal loop, turn it into a guitar, a flute, whatever; pre-processing
+        cleans the audio before the model touches it. Plays the first thing
+        you record back at the right BPM and locks the rest to it. Count-in
+        metronome, latency-compensated capture, waveforms drawn on the GPU.
+        JUCE 8, C++20, Metal, lock-free SPSC between UI and audio threads.
       </>
     ),
   },
